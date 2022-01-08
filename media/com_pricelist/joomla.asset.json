@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_pricelist",
+  "version": "1.0.0",
+  "description": "Joomla CMS",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "com_pricelist.admin-products-modal",
+      "type": "script",
+      "uri": "com_pricelist/admin-products-modal.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "com_pricelist.pricelist-default",
+      "type": "style",
+      "uri": "com_pricelist/pricelist-default.css"
+    }
+  ]
+}

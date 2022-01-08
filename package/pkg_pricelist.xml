@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="package" version="1.0" method="upgrade">
+    <name>Price List</name>
+    <packagename>pricelist</packagename>
+    <creationDate>January 2022</creationDate>
+    <packager>Joomill</packager>
+    <packageremail>info@joomill-extensions.com</packageremail>
+    <packagerurl>https://www.joomill-extensions.com</packagerurl>
+    <author>Joomill</author>
+    <authorEmail>info@joomill-extensions.com</authorEmail>
+    <authorUrl>https://www.joomill-extensions.com</authorUrl>
+    <copyright>Copyright 2022</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <version>4.0.0</version>
+    <description></description>
+    <namespace path="src">Joomill\Component\Pricelist</namespace>
+    <scriptfile>script.php</scriptfile>
+
+    <!-- Frond-end files -->
+    <files>
+        <file type="component" id="com_pricelist">com_pricelist.zip</file>
+        <file type="plugin" id="plg_system_pricelist" group="system">plg_system_pricelist.zip</file>
+    </files>
+
+    <changelogurl><![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=changelog&amp;format=xml&amp;cat=3]]></changelogurl>
+
+    <updateservers><server type="extension" name="Price List"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=updater&amp;format=xml&amp;cat=3]]></server></updateservers>
+</extension>

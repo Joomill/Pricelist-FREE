@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="component" method="upgrade">
+    <name>COM_PRICELIST</name>
+    <creationDate>January 2022</creationDate>
+    <author>Joomill</author>
+    <authorEmail>info@joomill-extensions.com</authorEmail>
+    <authorUrl>https://www.joomill-extensions.com</authorUrl>
+    <copyright>Copyright (C) 2022 joomill. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <version>4.0.0</version>
+    <description>COM_PRICELIST_XML_DESCRIPTION</description>
+    <namespace path="src">Joomill\Component\Pricelist</namespace>
+    <scriptfile>script.php</scriptfile>
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update>  <!-- Runs on update -->
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <!-- Frond-end files -->
+    <files folder="components/com_pricelist">
+        <folder>language</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <!-- Back-end files -->
+    <administration>
+        <!-- Menu entries -->
+        <menu view="products">COM_PRICELIST</menu>
+        <submenu>
+            <menu view="products">COM_PRICELIST_PRODUCTS</menu>
+            <menu link="option=com_categories&amp;extension=com_pricelist" view="categories" img="class:pricelist-cat"
+                  alt="Pricelist/Categories">JCATEGORIES
+            </menu>
+        </submenu>
+
+        <files folder="administrator/components/com_pricelist">
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+            <filename>pricelist.xml</filename>
+            <folder>forms</folder>
+            <folder>language</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+    </administration>
+
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="1" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

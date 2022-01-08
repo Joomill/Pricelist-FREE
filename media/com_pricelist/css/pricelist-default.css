@@ -1,0 +1,112 @@
+/*
+ *  package: Joomla Price List component
+ *  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
+ *  license: GNU General Public License version 3 or later
+ *  link: https://www.joomill-extensions.com
+ */
+
+.pricelist {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em auto;
+    padding: 0;
+    width: 100%;
+}
+
+.pricelist .pricelist-row {
+    align-items: baseline;
+    border-bottom: 1px solid #dfe3e7;
+    display: flex;
+    width: 100%;
+}
+
+.pricelist .pricelist-row.pricelist-row--head {
+    align-items: inherit;
+}
+
+.pricelist .pricelist-row .pricelist-cell {
+    box-sizing: border-box;
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style: none;
+}
+
+.pricelist-cell {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.pricelist-cell p {
+    margin-bottom: 0px;
+}
+
+.pricelist .edit-cell {
+    max-width: 50px;
+}
+
+.description-cell {
+    flex: 1 1 auto;
+}
+
+
+
+/* Responsive
+==================================== */
+
+.pricelist .pricelist-row .pricelist-cell .pricelist-cell--heading {
+    display: none;
+}
+
+@media all and (max-width: 750px) {
+
+    .pricelist--collapse {
+        display: block;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .pricelist--collapse .pricelist-row {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2em;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .pricelist--collapse .pricelist-row .pricelist-cell {
+        text-align: left !important;
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+    }
+
+    .pricelist--collapse .pricelist-row .pricelist-cell .pricelist-cell--heading {
+        display: inline-block;
+        flex: 1;
+        max-width: 120px;
+        min-width: 120px;
+        font-weight: 700;
+        margin-right: 1em;
+    }
+
+    .pricelist--collapse .pricelist-row .pricelist-cell .pricelist-cell--content {
+        flex: 2;
+    }
+
+    .pricelist--collapse .topic-cell {
+        background-color: #43BAC0;
+        color: white;
+        font-weight: 700;
+        order: -1;
+    }
+
+    .pricelist--collapse .topic-cell .pricelist-cell--content {
+        padding-left: 0 !important;
+    }
+
+    .pricelist--collapse .pricelist-row--head {
+        display: none;
+    }
+}

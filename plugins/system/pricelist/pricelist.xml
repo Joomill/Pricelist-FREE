@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.9" group="system" method="upgrade">
+    <name>PLG_PRICELIST</name>
+    <creationDate>January 2022</creationDate>
+    <author>Joomill</author>
+    <authorEmail>info@joomill-extensions.com</authorEmail>
+    <authorUrl>https://www.joomill-extensions.com</authorUrl>
+    <copyright>Copyright (C) 2022 joomill. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <version>1.0.0</version>
+    <description>PLG_PRICELIST_XML_DESCRIPTION</description>
+
+    <!-- Scripts to run on installation -->
+    <scriptfile>script.php</scriptfile>
+
+    <!-- Files -->
+    <files>
+        <filename plugin="pricelist">pricelist.php</filename>
+        <filename>script.php</filename>
+        <folder>language</folder>
+        <folder>params</folder>
+    </files>
+
+    <!-- Languages -->
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_pricelist.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_pricelist.sys.ini</language>
+    </languages>
+
+    <!-- Configuration / Parameters -->
+    <config>
+    </config>
+
+</extension>

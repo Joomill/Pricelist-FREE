@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="PRICELIST_STYLING">
+        <fieldset
+            name="table_heading_fieldset"
+            label="COM_PRICELIST_TABLE_HEADING_LABEL"
+        >
+            <field
+                name="show_table_heading"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="COM_PRICELIST_SHOW_TABLE_HEADING_LABEL"
+                default="1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field
+                name="show_mobile_heading"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="COM_PRICELIST_SHOW_MOBILE_HEADING_LABEL"
+                default="1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field
+                name="heading_bgcolor"
+                type="color"
+                format="rgba"
+                default="rgba(52, 179, 179, 1)"
+                label="COM_PRICELIST_HEADING_BGCOLOR_LABEL"
+                showon="show_table_heading:1"
+            />
+            <field
+                name="heading_fontcolor"
+                type="color"
+                default="#ffffff"
+                label="COM_PRICELIST_HEADING_FONTCOLOR_LABEL"
+                showon="show_table_heading:1"
+            />
+            <field
+                name="heading_fontsize"
+                type="text"
+                default="1em"
+                label="COM_PRICELIST_COLUMN_FONTSIZE_LABEL"
+                description="COM_PRICELIST_COLUMN_FONTSIZE_DESC"
+                showon="show_table_heading:1"
+            />
+            <field
+                name="heading_fontweight"
+                type="list"
+                default="bold"
+                label="COM_PRICELIST_COLUMN_FONTWEIGHT_LABEL"
+                showon="show_table_heading:1"
+                >
+                <option value="normal">Normal</option>
+                <option value="bold">Bold</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="400">400</option>
+                <option value="500">500</option>
+                <option value="600">600</option>
+                <option value="700">700</option>
+                <option value="800">800</option>
+                <option value="900">900</option>
+            </field>
+        </fieldset>
+
+        <fieldset
+                name="table_featured_fieldset"
+                label="COM_PRICELIST_TABLE_FEATURED_LABEL"
+                addfieldpath="administrator/components/com_pricelist/elements/"
+        >
+            <field
+                    name="featured_bgcolor"
+                    type="pro"
+                    label="COM_PRICELIST_FEATURED_BGCOLOR_LABEL"
+            />
+            <field
+                    name="featured_fontcolor"
+                    type="pro"
+                    label="COM_PRICELIST_FEATURED_FONTCOLOR_LABEL"
+            />
+            <field
+                    name="featured_fontsize"
+                    type="pro"
+                    label="COM_PRICELIST_COLUMN_FONTSIZE_LABEL"
+            />
+            <field
+                    name="featured_fontweight"
+                    type="pro"
+                    label="COM_PRICELIST_COLUMN_FONTWEIGHT_LABEL"
+            />
+        </fieldset>
+
+        <fieldset
+            name="name_column_fieldset"
+            label="COM_PRICELIST_NAME_COLUMN_LABEL"
+        >
+            <field
+                name="name_heading"
+                type="text"
+                default="Name"
+                label="COM_PRICELIST_COLUMN_HEADING_LABEL"
+            />
+            <field
+                name="name_width"
+                type="text"
+                default="300px"
+                label="COM_PRICELIST_COLUMN_WIDTH_LABEL"
+                description="COM_PRICELIST_COLUMN_WIDTH_DESC"
+            />
+            <field
+                name="name_fontsize"
+                type="text"
+                default="1em"
+                label="COM_PRICELIST_COLUMN_FONTSIZE_LABEL"
+                description="COM_PRICELIST_COLUMN_FONTSIZE_DESC"
+            />
+            <field
+                name="name_fontweight"
+                type="list"
+                default="normal"
+                label="COM_PRICELIST_COLUMN_FONTWEIGHT_LABEL"
+                >
+                <option value="normal">Normal</option>
+                <option value="bold">Bold</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="400">400</option>
+                <option value="500">500</option>
+                <option value="600">600</option>
+                <option value="700">700</option>
+                <option value="800">800</option>
+                <option value="900">900</option>
+            </field>
+            <field
+                name="name_textalign"
+                type="list"
+                default="left"
+                label="COM_PRICELIST_COLUMN_TEXTALIGN_LABEL"
+                >
+                <option value="left">COM_PRICELIST_COLUMN_TEXTALIGN_LEFT</option>
+                <option value="center">COM_PRICELIST_COLUMN_TEXTALIGN_CENTER</option>
+                <option value="right">COM_PRICELIST_COLUMN_TEXTALIGN_RIGHT</option>
+            </field>
+        </fieldset>
+
+        <fieldset
+            name="description_column_fieldset"
+            label="COM_PRICELIST_DESCRIPTION_COLUMN_LABEL"
+        >
+            <field
+                name="description_heading"
+                type="text"
+                default="Description"
+                label="COM_PRICELIST_COLUMN_HEADING_LABEL"
+            />
+            <field
+                name="show_mobile_description"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="COM_PRICELIST_SHOW_MOBILE_DESCRIPTION_LABEL"
+                default="1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field
+                name="description_fontsize"
+                type="text"
+                default="1em"
+                label="COM_PRICELIST_COLUMN_FONTSIZE_LABEL"
+                description="COM_PRICELIST_COLUMN_FONTSIZE_DESC"
+            />
+            <field
+                name="description_fontweight"
+                type="list"
+                default="normal"
+                label="COM_PRICELIST_COLUMN_FONTWEIGHT_LABEL"
+                >
+                <option value="normal">Normal</option>
+                <option value="bold">Bold</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="400">400</option>
+                <option value="500">500</option>
+                <option value="600">600</option>
+                <option value="700">700</option>
+                <option value="800">800</option>
+                <option value="900">900</option>
+            </field>
+            <field
+                name="description_textalign"
+                type="list"
+                default="left"
+                label="COM_PRICELIST_COLUMN_TEXTALIGN_LABEL"
+                >
+                <option value="left">COM_PRICELIST_COLUMN_TEXTALIGN_LEFT</option>
+                <option value="center">COM_PRICELIST_COLUMN_TEXTALIGN_CENTER</option>
+                <option value="right">COM_PRICELIST_COLUMN_TEXTALIGN_RIGHT</option>
+            </field>
+        </fieldset>
+
+        <fieldset
+                name="price_column_fieldset"
+                label="COM_PRICELIST_PRICE_COLUMN_LABEL"
+        >
+            <field
+                name="price_heading"
+                type="text"
+                default="Price"
+                label="COM_PRICELIST_COLUMN_HEADING_LABEL"
+            />
+            <field
+                name="price_prefix"
+                type="text"
+                default=""
+                label="COM_PRICELIST_PRICE_PREFIX_LABEL"
+                description="COM_PRICELIST_PRICE_PREFIX_DESC"
+            />
+            <field
+                name="price_suffix"
+                type="text"
+                default=""
+                label="COM_PRICELIST_PRICE_SUFFIX_LABEL"
+                description="COM_PRICELIST_PRICE_SUFFIX_DESC"
+            />
+            <field
+                name="price_width"
+                type="text"
+                default="100px"
+                label="COM_PRICELIST_COLUMN_WIDTH_LABEL"
+                description="COM_PRICELIST_COLUMN_WIDTH_DESC"
+            />
+            <field
+                name="price_fontsize"
+                type="text"
+                default="1em"
+                label="COM_PRICELIST_COLUMN_FONTSIZE_LABEL"
+                description="COM_PRICELIST_COLUMN_FONTSIZE_DESC"
+            />
+            <field
+                name="price_fontweight"
+                type="list"
+                default="normal"
+                label="COM_PRICELIST_COLUMN_FONTWEIGHT_LABEL"
+                >
+                <option value="normal">Normal</option>
+                <option value="bold">Bold</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="400">400</option>
+                <option value="500">500</option>
+                <option value="600">600</option>
+                <option value="700">700</option>
+                <option value="800">800</option>
+                <option value="900">900</option>
+            </field>
+            <field
+                name="price_textalign"
+                type="list"
+                default="right"
+                label="COM_PRICELIST_COLUMN_TEXTALIGN_LABEL"
+                >
+                <option value="left">COM_PRICELIST_COLUMN_TEXTALIGN_LEFT</option>
+                <option value="center">COM_PRICELIST_COLUMN_TEXTALIGN_CENTER</option>
+                <option value="right">COM_PRICELIST_COLUMN_TEXTALIGN_RIGHT</option>
+            </field>
+        </fieldset>
+
+        <fieldset
+            name="custom_css_fieldset"
+            label="COM_PRICELIST_CUSTOM_CSS_LABEL"
+        >
+            <field
+                type="editor"
+                name="custom_css"
+                label="COM_PRICELIST_CUSTOM_CSS_LABEL"
+                default=""
+                rows="10"
+                buttons="no"
+                editor="codemirror|none"
+                filter="raw"
+            />
+        </fieldset>
+    </fieldset>
+
+    <fieldset
+        name="integration_fieldset"
+        label="COM_PRICELIST_INTEGRATION_LABEL"
+        description="COM_PRICELIST_INTEGRATION_DESC"
+    >
+        <fieldset
+            name="integration_customfields"
+            label="JGLOBAL_FIELDS_TITLE"
+        >
+            <field
+                name="custom_fields_enable"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="JGLOBAL_CUSTOM_FIELDS_ENABLE_LABEL"
+                description="JGLOBAL_CUSTOM_FIELDS_ENABLE_DESC"
+                default="0"
+                disabled="true"
+                >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+        </fieldset>
+
+        <fieldset
+                name="integration_versions"
+                label="COM_PRICELIST_HISTORY_LABEL"
+        >
+            <field
+                name="save_history"
+                type="radio"
+                default="0"
+                label="JGLOBAL_SAVE_HISTORY_OPTIONS_LABEL"
+                description="JGLOBAL_SAVE_HISTORY_OPTIONS_DESC"
+                layout="joomla.form.field.radio.switcher"
+                disabled="true"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+        </fieldset>
+
+    </fieldset>
+
+    <fieldset
+        name="permissions"
+        label="JCONFIG_PERMISSIONS_LABEL"
+        description="JCONFIG_PERMISSIONS_DESC"
+    >
+        <field
+            name="rules"
+            type="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            validate="rules"
+            filter="rules"
+            component="com_pricelist"
+            section="component"
+        />
+    </fieldset>
+</config>
