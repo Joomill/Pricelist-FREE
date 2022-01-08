@@ -1,13 +1,6 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-/*
- *  package: Joomla Price List component
- *  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
- *  license: GNU General Public License version 2 or later
- *  link: https://www.joomill-extensions.com
- */
-
 --
 -- Table structure for table `#__pricelist_products`
 --

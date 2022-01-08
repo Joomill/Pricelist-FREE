@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~  package: Joomla Price List component
-  ~  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
-  ~  license: GNU General Public License version 2 or later
-  ~  link: https://www.joomill-extensions.com
-  -->
-
 <form>
     <fields name="params">
         <fieldset name="renderoptions" label="COM_FIELDS_FIELD_RENDEROPTIONS_HEADING">

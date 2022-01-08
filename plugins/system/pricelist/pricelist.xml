@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~  package: Joomla Price List component
-  ~  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
-  ~  license: GNU General Public License version 2 or later
-  ~  link: https://www.joomill-extensions.com
-  -->
-
 <extension type="plugin" version="3.9" group="system" method="upgrade">
     <name>PLG_PRICELIST</name>
     <creationDate>January 2022</creationDate>
