@@ -184,3 +184,8 @@ if ($saveOrder && !empty($this->items))
         </div>
     </div>
 </form>
+
+<div class="alert alert-info text-center">
+    <?php echo Text::_('COM_PRICELIST_FREE_VERSION'); ?><br/>
+    <a href="https://www.joomill-extensions.com/extensions/price-list-component" class="btn btn-primary" target="_blank"><?php echo Text::_('COM_PRICELIST_GO_PRO'); ?></a>
+</div>

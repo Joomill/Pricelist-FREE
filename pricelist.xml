@@ -2,7 +2,7 @@
 <extension type="component" method="upgrade">
     <name>COM_PRICELIST</name>
     <creationDate>January 2022</creationDate>
-    <author>Joomill</author>
+    <author>Joomill Extensions</author>
     <authorEmail>info@joomill-extensions.com</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
     <copyright>Copyright (C) 2022 joomill. All rights reserved.</copyright>
@@ -11,17 +11,23 @@
     <description>COM_PRICELIST_XML_DESCRIPTION</description>
     <namespace path="src">Joomill\Component\Pricelist</namespace>
     <scriptfile>script.php</scriptfile>
-    <install> <!-- Runs on install -->
+
+    <!-- Runs on install -->
+    <install>
         <sql>
             <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
         </sql>
     </install>
-    <update>  <!-- Runs on update -->
+
+    <!-- Runs on update -->
+    <update>
         <schemas>
             <schemapath type="mysql">sql/updates/mysql</schemapath>
         </schemas>
     </update>
-    <uninstall> <!-- Runs on uninstall -->
+
+    <!-- Runs on uninstall -->
+    <uninstall>
         <sql>
             <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
         </sql>
@@ -29,7 +35,9 @@
 
     <!-- Frond-end files -->
     <files folder="components/com_pricelist">
+        <folder>forms</folder>
         <folder>language</folder>
+        <folder>layouts</folder>
         <folder>src</folder>
         <folder>tmpl</folder>
     </files>
@@ -49,6 +57,8 @@
             <filename>config.xml</filename>
             <filename>access.xml</filename>
             <filename>pricelist.xml</filename>
+            <filename>script.php</filename>
+            <folder>elements</folder>
             <folder>forms</folder>
             <folder>language</folder>
             <folder>services</folder>
@@ -57,6 +67,12 @@
             <folder>tmpl</folder>
         </files>
     </administration>
+
+    <media folder="media/com_pricelist" destination="com_pricelist">
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
 
     <config>
         <fields name="params">

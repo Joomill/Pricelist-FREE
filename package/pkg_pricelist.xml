@@ -3,10 +3,10 @@
     <name>Price List</name>
     <packagename>pricelist</packagename>
     <creationDate>January 2022</creationDate>
-    <packager>Joomill</packager>
+    <packager>Joomill Extensions</packager>
     <packageremail>info@joomill-extensions.com</packageremail>
     <packagerurl>https://www.joomill-extensions.com</packagerurl>
-    <author>Joomill</author>
+    <author>Joomill Extensions</author>
     <authorEmail>info@joomill-extensions.com</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
     <copyright>Copyright 2022</copyright>
@@ -16,7 +16,6 @@
     <namespace path="src">Joomill\Component\Pricelist</namespace>
     <scriptfile>script.php</scriptfile>
 
-    <!-- Frond-end files -->
     <files>
         <file type="component" id="com_pricelist">com_pricelist.zip</file>
         <file type="plugin" id="plg_system_pricelist" group="system">plg_system_pricelist.zip</file>

@@ -90,3 +90,8 @@ $tmpl = $input->get('tmpl', '', 'cmd') === 'component' ? '&tmpl=component' : '';
     <input type="hidden" name="forcedLanguage" value="<?php echo $input->get('forcedLanguage', '', 'cmd'); ?>">
     <?php echo HTMLHelper::_('form.token'); ?>
 </form>
+
+<div class="alert alert-info text-center">
+    <?php echo Text::_('COM_PRICELIST_FREE_VERSION'); ?><br/>
+    <a href="https://www.joomill-extensions.com/extensions/price-list-component" class="btn btn-primary" target="_blank"><?php echo Text::_('COM_PRICELIST_GO_PRO'); ?></a>
+</div>
