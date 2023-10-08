@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <extension type="component" method="upgrade">
     <name>COM_PRICELIST</name>
-    <creationDate>January 2022</creationDate>
+    <creationDate>October 2023</creationDate>
     <author>Joomill Extensions</author>
     <authorEmail>info@joomill-extensions.com</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
-    <copyright>Copyright (C) 2022 joomill. All rights reserved.</copyright>
+    <copyright>Copyright (C) 2023 joomill. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later;</license>
-    <version>4.0.0</version>
+    <version>4.2.0</version>
     <description>COM_PRICELIST_XML_DESCRIPTION</description>
     <namespace path="src">Joomill\Component\Pricelist</namespace>
     <scriptfile>script.php</scriptfile>

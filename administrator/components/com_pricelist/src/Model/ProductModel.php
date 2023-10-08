@@ -1,17 +1,17 @@
 <?php
 /*
  *  package: Joomla Price List component
- *  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2023. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 2 or later
  *  link: https://www.joomill-extensions.com
  */
 
 namespace Joomill\Component\Pricelist\Administrator\Model;
 
-// No direct access.
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
+use Joomla\CMS\Form\Form;
 use Joomla\CMS\Helper\TagsHelper;
 use Joomla\CMS\Language\Associations;
 use Joomla\CMS\Language\LanguageHelper;
@@ -299,7 +299,7 @@ class ProductModel extends AdminModel
      *
      * @since   4.0.0
      */
-    protected function preprocessForm(\JForm $form, $data, $group = 'product')
+    protected function preprocessForm(Form $form, $data, $group = 'product')
     {
         if (Associations::isEnabled())
         {

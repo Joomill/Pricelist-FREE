@@ -1,15 +1,14 @@
 <?php
 /*
  *  package: Joomla Price List component
- *  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2023. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 2 or later
  *  link: https://www.joomill-extensions.com
  */
 
 namespace Joomill\Component\Pricelist\Administrator\View\Products;
 
-// No direct access.
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 use Joomill\Component\Pricelist\Administrator\Helper\ProductHelper;
 use Joomla\CMS\Factory;
@@ -20,6 +19,7 @@ use Joomla\CMS\MVC\View\GenericDataException;
 use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
 use Joomla\CMS\Toolbar\Toolbar;
 use Joomla\CMS\Toolbar\ToolbarHelper;
+
 
 /**
  * View class for a list of pricelist.
@@ -173,6 +173,14 @@ class HtmlView extends BaseHtmlView
             $childBar = $dropdown->getChildToolbar();
             $childBar->publish('products.publish')->listCheck(true);
             $childBar->unpublish('products.unpublish')->listCheck(true);
+            $childBar->standardButton('featured')
+                ->text('JFEATURE')
+                ->task('products.featured')
+                ->listCheck(true);
+            $childBar->standardButton('unfeatured')
+                ->text('JUNFEATURE')
+                ->task('products.unfeatured')
+                ->listCheck(true);
             $childBar->archive('products.archive')->listCheck(true);
 
             if ($user->authorise('core.admin'))
@@ -191,6 +199,17 @@ class HtmlView extends BaseHtmlView
             $toolbar->delete('products.delete')
                 ->text('JTOOLBAR_EMPTY_TRASH')
                 ->message('JGLOBAL_CONFIRM_DELETE')
+                ->listCheck(true);
+        }
+
+        // Add a batch button
+        if ($user->authorise('core.create', 'com_pricelist')
+            && $user->authorise('core.edit', 'com_pricelist')
+            && $user->authorise('core.edit.state', 'com_pricelist'))
+        {
+            $childBar->popupButton('batch')
+                ->text('JTOOLBAR_BATCH')
+                ->selector('collapseModal')
                 ->listCheck(true);
         }
 

@@ -1,7 +1,7 @@
 <?php
 /*
  *  package: Joomla Price List component
- *  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2023. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 2 or later
  *  link: https://www.joomill-extensions.com
  */
@@ -29,6 +29,11 @@ $listOrder = $this->escape($this->state->get('list.ordering'));
 $listDirn = $this->escape($this->state->get('list.direction'));
 $saveOrder = $listOrder == 'a.ordering';
 $params = ComponentHelper::getParams('com_pricelist');
+
+/** @var \Joomla\CMS\WebAsset\WebAssetManager $wa */
+$wa = $this->document->getWebAssetManager();
+$wa->useScript('table.columns')
+    ->useScript('multiselect');
 
 if ($saveOrder && !empty($this->items))
 {
@@ -185,7 +190,7 @@ if ($saveOrder && !empty($this->items))
     </div>
 </form>
 
-<div class="alert alert-info text-center">
+<div class="alert alert-warning text-center">
     <?php echo Text::_('COM_PRICELIST_FREE_VERSION'); ?><br/>
     <a href="https://www.joomill-extensions.com/extensions/price-list-component" class="btn btn-primary" target="_blank"><?php echo Text::_('COM_PRICELIST_GO_PRO'); ?></a>
 </div>

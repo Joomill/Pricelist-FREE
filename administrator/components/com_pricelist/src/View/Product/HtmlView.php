@@ -1,15 +1,14 @@
 <?php
 /*
  *  package: Joomla Price List component
- *  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2023. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 2 or later
  *  link: https://www.joomill-extensions.com
  */
 
 namespace Joomill\Component\Pricelist\Administrator\View\Product;
 
-// No direct access.
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 use Joomla\CMS\Component\ComponentHelper;
 use Joomla\CMS\Factory;
@@ -124,6 +123,18 @@ class HtmlView extends BaseHtmlView
                 }
             }
         );
+
+        // Button for version control
+        if ($this->state->params->get('save_history', 1) && $user->authorise('core.edit')) {
+            ToolbarHelper::versions('com_pricelist.product', $this->item->id);
+        }
+
+        if (Associations::isEnabled() && ComponentHelper::isEnabled('com_associations'))
+        {
+            $toolbar->standardButton('contract')
+                ->text('JTOOLBAR_ASSOCIATIONS')
+                ->task('product.editAssociations');
+        }
 
         $toolbar->cancel('product.cancel', 'JTOOLBAR_CLOSE');
 

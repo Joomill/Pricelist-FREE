@@ -1,7 +1,7 @@
 <?php
 /*
  *  package: Joomla Price List component
- *  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2023. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 2 or later
  *  link: https://www.joomill-extensions.com
  */
@@ -63,7 +63,7 @@ class plgSystemPricelist extends CMSPlugin
         $option = $app->input->get('option');
         $context = $app->input->get('context');
         $extension = $app->input->get('extension');
-        if (!($form instanceof JForm))
+        if (!($form instanceof Form))
         {
             $this->_subject->setError('JERROR_NOT_A_FORM');
             return false;
@@ -78,19 +78,19 @@ class plgSystemPricelist extends CMSPlugin
 
         if (($option == "com_categories") && ($extension == "com_pricelist")) {
             $doc = Factory::getDocument();
-            $script = "	function hideedit() {
+            $script = " function hideedit() {
             document.getElementById('toolbar-contract').style.display = 'none';
             document.getElementById('associations').style.display = 'none';
             
             var t = document.getElementById('jform_language');
-			t.value = '';
-			t.parentNode.parentNode.style.display = 'none';
-			
-			var t = document.getElementById('jform_access');
-			t.value = '';
-			t.parentNode.parentNode.style.display = 'none';
-			}
-		window.onload = hideedit;";
+            t.value = '';
+            t.parentNode.parentNode.style.display = 'none';
+            
+            var t = document.getElementById('jform_access');
+            t.value = '';
+            t.parentNode.parentNode.style.display = 'none';
+            }
+        window.onload = hideedit;";
             $doc->addScriptDeclaration($script);
         }
     }

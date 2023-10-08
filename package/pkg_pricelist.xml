@@ -2,16 +2,16 @@
 <extension type="package" version="1.0" method="upgrade">
     <name>Price List</name>
     <packagename>pricelist</packagename>
-    <creationDate>January 2022</creationDate>
+    <creationDate>October 2023</creationDate>
     <packager>Joomill Extensions</packager>
     <packageremail>info@joomill-extensions.com</packageremail>
     <packagerurl>https://www.joomill-extensions.com</packagerurl>
     <author>Joomill Extensions</author>
     <authorEmail>info@joomill-extensions.com</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
-    <copyright>Copyright 2022</copyright>
+    <copyright>Copyright 2023</copyright>
     <license>GNU General Public License version 2 or later;</license>
-    <version>4.0.0</version>
+    <version>4.2.0</version>
     <description></description>
     <namespace path="src">Joomill\Component\Pricelist</namespace>
     <scriptfile>script.php</scriptfile>

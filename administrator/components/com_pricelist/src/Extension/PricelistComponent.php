@@ -1,15 +1,14 @@
 <?php
 /*
  *  package: Joomla Price List component
- *  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2023. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 2 or later
  *  link: https://www.joomill-extensions.com
  */
 
 namespace Joomill\Component\Pricelist\Administrator\Extension;
 
-// No direct access.
-defined('_JEXEC') or die;
+defined('JPATH_PLATFORM') or die;
 
 use Joomill\Component\Pricelist\Administrator\Service\HTML\AdministratorService;
 use Joomill\Component\Pricelist\Administrator\Service\HTML\Icon;
